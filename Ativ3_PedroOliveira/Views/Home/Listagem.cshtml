@@ -1,0 +1,26 @@
+﻿@using Ativ3_PedroOliveira.Models
+@model List<AgendamentoModel>
+<h2>Agendamento feito com sucesso!</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Data</th>
+            <th>Animal</th>
+            <th>Necessidade</th>
+        </tr>
+        <tbody>
+                @foreach (AgendamentoModel u in Model)
+                {
+                 <tr>
+                    <td>@u.Nome</td>
+                    <td>@u.Telefone</td>
+                    <td>@u.Data.ToString("dd/MM/yyyy")</td>
+                    <td>@u.Animal</td>
+                    <td>@u.Necessidade</td>
+                 </tr>
+                }
+        </tbody>
+    </thead>
+</table>
